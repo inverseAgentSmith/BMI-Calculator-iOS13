@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Github test
     }
-
-
+//    Change heightLabel to UI slider value and format to 2 decimal place limit
+    @IBAction func heightSliderChanged(_ sender: UISlider) {
+        let currentHeight = Double(sender.value)
+        heightLabel.text = String(format: "%.2f", currentHeight) + "m"
+    }
+//    Change weightLabel value as an integer when weightSlider is moved
+    @IBAction func weightSliderChanged(_ sender: UISlider) {
+        let currentWeight = Int(sender.value)
+        weightLabel.text = String(currentWeight) + "kg"
+    }
 }
-

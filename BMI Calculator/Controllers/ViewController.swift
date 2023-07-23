@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         let height = heightSlider.value
         let weight = weightSlider.value
         
-        let bodyMassIndex = weight / pow(height, 2)
+        let bmi = weight / pow(height, 2)
+        print(bmi)
     }
 }

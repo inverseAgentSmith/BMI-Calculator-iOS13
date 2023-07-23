@@ -25,5 +25,6 @@ class ViewController: UIViewController {
     @IBAction func weightSliderChanged(_ sender: UISlider) {
         let currentWeight = Int(sender.value)
         weightLabel.text = "\(currentWeight)kg"
+        print("GITTEST")
     }
 }

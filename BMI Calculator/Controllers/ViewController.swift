@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//    Label IBOutlets
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+//    Slider IBOutlets
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +29,12 @@ class ViewController: UIViewController {
         let currentWeight = Int(sender.value)
         weightLabel.text = "\(currentWeight)kg"
         print("GITTEST")
+    }
+//    Calculate BMI using slider values once "calculate" button is pressed
+    @IBAction func calculatePressed(_ sender: UIButton) {
+        let height = heightSlider.value
+        let weight = weightSlider.value
+        
+        let bodyMassIndex = weight / pow(height, 2)
     }
 }

@@ -24,18 +24,4 @@ class ViewController: UIViewController {
         let currentHeight = String(format: "%.2f", sender.value)
         heightLabel.text = "\(currentHeight)m"
     }
-//    Change weightLabel value as an integer when weightSlider is moved
-    @IBAction func weightSliderChanged(_ sender: UISlider) {
-        let currentWeight = Int(sender.value)
-        weightLabel.text = "\(currentWeight)kg"
-        print("GITTEST")
-    }
-//    Calculate BMI using slider values once "calculate" button is pressed
-    @IBAction func calculatePressed(_ sender: UIButton) {
-        let height = heightSlider.value
-        let weight = weightSlider.value
-        
-        let bmi = weight / pow(height, 2)
-        print(bmi)
-    }
 }
